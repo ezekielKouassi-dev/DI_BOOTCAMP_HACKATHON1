@@ -53,6 +53,6 @@ function makePdfjs(data){
       pdf.text("Prix : " + data.price, 8, 35);
 
      
-      pdf.save("tiket"+ this.uuid() +".pdf");
+      pdf.save("tiket.pdf");
 }
 
