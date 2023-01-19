@@ -1,12 +1,14 @@
-function generateQrcode(selectorId='qr_code',data={}) 
+/**
+ * 
+ * @param {String} selectorId 
+ * @param {any} data 
+ * @returns 
+ */
+function generateQrcode(selectorId='qr_code',data) 
 {
 
-    let donnees = [
-        this.uuid(),
-        data
-    ]
     var qrcode = new QRCode(selectorId, {
-        text: JSON.stringify(donnees),
+        text: JSON.stringify(data),
         width: 128,
         height: 128,
         colorDark: "#000000",
@@ -17,20 +19,15 @@ function generateQrcode(selectorId='qr_code',data={})
     return qrcode;
 }  
 
-function   uuid() {
-    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {
-        var r = Math.random()*16|0,
-        v = c == 'x' ? r : c;
-        return v.toString(16);
-    });
-}
-const data = {
-    selectorId: this.uuids(),
-    price:200,
-    number:82,
-    itineraires:'Angre - Plateau'
-}
+
+
+/**
+ * @description: cette fonction permet de faire le pdf
+ * @param {*} data 
+ */
 function makePdfjs(data){
+
+
     var pdf = new jsPDF({
         orientation: "landscape",
         unit: "mm",
@@ -41,20 +38,21 @@ function makePdfjs(data){
       pdf.setFontSize(20);
       pdf.text("SOTRA", 28, 15);
 
-      let base64Image = $("#qr_code img").attr("src");
-      pdf.addImage(base64Image, 'png', 32, 50, 20, 20);
+    //   let base64Image = $(`#${data.selectorId} img`).attr("src");
+    //   pdf.addImage(base64Image, 'png', 32, 50, 20, 20);
    
       
       pdf.setFontSize(12);
-      pdf.text("Ligne : " + ligne.number , 8, 25);
+      pdf.text("Ligne : " + data.number , 8, 25);
 
       pdf.setFontSize(10);
-      pdf.text("Itinéraire : " + ligne.itineraire, 8, 30);
+      pdf.text("Itinéraire : " + data.itineraire, 8, 30);
 
       
       pdf.setFontSize(10);
-      pdf.text("Prix : " + ligne.price, 8, 35);
+      pdf.text("Prix : " + data.price, 8, 35);
 
      
-      pdf.save("generated.pdf");
+      pdf.save("tiket"+ this.uuid() +".pdf");
 }
+
