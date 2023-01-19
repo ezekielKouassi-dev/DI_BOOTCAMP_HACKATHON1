@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home-page-datatable</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" href="../css/all-style.css">
+
+</head>
+<body>
+   
+    <main>
+        <div class="container-fluid">
+            <div class="welcome">
+                <header>
+                  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <div class="container-fluid">
+                      <div class="container-fluid">
+                        <a class="navbar-brand" id="title" href="#">Ticketpay</a>
+                      </div>
+                      <ul class="navbar-nav" id="menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="./../index.html"> Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./itineraire.html">Itinéraires</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </header>
+               <div class="div-breadcrumb">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">TicketPay</a></li>
+                        <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Liste des itinéraires</li>
+                        </ol>
+                    </nav>
+               </div>
+            </div>
+            <div class="row container-fluid">
+                <div class="col-12 mt-5 px-5">
+                    <table id="data-table" class="table table-striped" style="width:100%">
+                        <thead>
+                            <tr>
+                                <th>numéro du bus</th>
+                                <th>type de bus</th>
+                                <th>itinéraire</th>
+                                <th>prix</th>
+                                <th>option</th>
+                            </tr>
+                        </thead>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/jquery.dataTables.min.js"></script>
+    <script src="https://cdn.datatables.net/1.13.1/js/dataTables.bootstrap5.min.js"></script>
+    <script src="../js/chargingFunction.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+body{
+    width: 100%;
+}
+  .welcome-home {
+    background-color: #239b56;
+    height: 620px;
+  }
+  .welcome {
+    background-color: #239b56;
+    height: 180px;
+    color: white;;
+  }
+  nav {
+    height: 80px;
+  }
+  #title {
+    font-size: 2em;
+  }
+
+  #menu {
+    font-size: 1.2em;
+  }
+  img {
+    height: 450px;
+    width: 700px;
+  }
+  .title-h2{
+    font-size: 3em;
+    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  .div-breadcrumb{
+    margin:3%;
+    font-size: 1.5em;
+    color:white
+  }
+  .div-breadcrumb ol li a{
+    color: white;
+    text-decoration: none;
+  }
+  .breadcrumb-item+.breadcrumb-item::before{
+    color: white;
+  }
