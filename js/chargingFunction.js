@@ -14,6 +14,9 @@
             "url" : "../jsonFile/datatable.json",
             "dataSrc" : "data"
         },
+        "language" : {
+            url : "../jsonFile/datatableFr.json"
+        },
         "columns" : [
             {"data" : "number"},
             {"data" : "type"},
