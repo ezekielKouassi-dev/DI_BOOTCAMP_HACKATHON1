@@ -8,63 +8,63 @@
             "type" : "normal",
             "itineraire" : "yopougon gesco <--> Plateau cité administrative",
             "price" : 200,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         },
         {
             "number" : 212,
             "type" : "express",
             "itineraire" : "yopougon niangon à gauche <--> Plateau gare sud",
             "price" : 500,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         },
         {
             "number" : 206,
             "type" : "express",
             "itineraire" : "yopougon siporex <--> Plateau sorbonne",
             "price" : 500,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         },
         {
             "number" : 726,
             "type" : "normal",
             "itineraire" : "plateau gare sud <--> yopougon soghefia",
             "price" : 500,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         },
         {
             "number" : 728,
             "type" : "normal",
             "itineraire" : "yopougon niangon à gauche <--> Palmeraie",
             "price" : 500,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         },
         {
             "number" : 201,
             "type" : "express",
             "itineraire" : "plateau gare sud <--> abobo",
             "price" : 500,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         },
         {
             "number" : 27,
             "type" : "normal",
             "itineraire" : "plateau <--> Niangon sud",
             "price" : 200,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         },
         {
             "number" : 211,
             "type" : "express",
             "itineraire" : "plateau gare sud <--> gonzague ville",
             "price" : 500,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         },
         {
             "number" : 209,
             "type" : "express",
             "itineraire" : "plateau sorbonne <--> yopougon sable",
             "price" : 500,
-            "option" : "<button>achat</button>"
+            "option" : "<button class='btn btn-success'>achat</button>"
         }
     ]
 }
