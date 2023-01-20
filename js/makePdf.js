@@ -38,8 +38,8 @@ function makePdfjs(data){
       pdf.setFontSize(20);
       pdf.text("SOTRA", 28, 15);
 
-    //   let base64Image = $(`#${data.selectorId} img`).attr("src");
-    //   pdf.addImage(base64Image, 'png', 32, 50, 20, 20);
+      let base64Image = $(`#${data.selectorId} img`).attr("src");
+      pdf.addImage(base64Image, 'png', 32, 50, 20, 20);
    
       
       pdf.setFontSize(12);
