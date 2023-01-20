@@ -12,12 +12,48 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.es.js" integrity="sha512-VTufZOUx+Gc0N4JkluA0ZkVs2x4wfDI3p60gRWpHT761kMQ+hiNlYI+8MGXbLO48ymPKAeRa1wsEm3BIaxSEvw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      
+    var pdf = new jsPDF({
+        orientation: "landscape",
+        unit: "mm",
+        format: [80, 80],
+      });
+
+      
+      pdf.setFontSize(20);
+      pdf.text("SOTRA", 28, 15);
+
+    //   let base64Image = $(`#${data.selectorId} img`).attr("src");
+    //   pdf.addImage(base64Image, 'png', 32, 50, 20, 20);
+   
+      
+      pdf.setFontSize(12);
+      pdf.text("Ligne : " + data.number , 8, 25);
+
+      pdf.setFontSize(10);
+      pdf.text("Itinéraire : " + data.itineraire, 8, 30);
+
+      
+      pdf.setFontSize(10);
+      pdf.text("Prix : " + data.price, 8, 35);
+
+     
+      pdf.save("tiket"+ this.uuid() +".pdf");
+    </script>
+
 <link rel="stylesheet" href="css/all-style.css">
+<script src="js/loadData.js" defer></script>
 
   </head>
   <body>
     <div class="container-fluid">
+      <div id="loader">
 
+      </div>
         <div class="welcome-home">
           <header>
             <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
@@ -32,6 +68,7 @@
                   <li class="nav-item">
                     <a class="nav-link" href="./pages/itineraire.html">Itinéraires</a>
                   </li>
+                  
                 </ul>
               </div>
             </nav>
@@ -124,7 +161,7 @@
                 </div>
             </section>
             <section id="services">
-                <h2 class="title-h2"> Nos Services</h2>
+                <h2 class="title-h2"> Nos services</h2>
     
                 <div class="row">
     
@@ -145,8 +182,14 @@
                             <div class="card-header">
                                 <h4 class="card-title text-center">Recherche des itinéraires</h4>
                             </div>
-                            <div class="card-body">
-                                Avec <strong>TICKETPAY</strong> plus besoinde faire 
+                            <div class="card-body text-center">
+                              <span class="text-center" style="font-size: 5em;">
+                                <i class="fa fa-search"></i>
+	
+
+                              </span>
+<br>
+                                Avec <strong>TICKETPAY</strong> plus besoinde faire de longue attente aux arrêts de bus. Rechercher un itinéraire et vérifier quand le bus pourrait être disponible avant de se rentrer à l'arrêt de bus 
                             </div>
                         </div>
                     </div>
@@ -157,7 +200,9 @@
             <div class="row m-5" >
                 <div class="col-lg-4">
                     <h3>
-                        <strong>Ticketpay</strong>
+                        <a href="#" onclick="checker()">
+                          <strong>Ticketpay</strong>
+                        </a>
                     </h3>
                     <p>
                         Votre platefome de paiement simple ,securisé , rapide pour acheter votre ticket de bus
@@ -173,6 +218,9 @@
                         <li>
                             <a href="./pages/itineraire.html">Liste des itinéraires</a>
                         </li>
+                        <li>
+                          <a href="./pages/login.html">Mon espace</a>
+                      </li>
                     </ul>
                 </div>
                 <div class="col-lg-4">
