@@ -1,7 +1,7 @@
 {
     "draw" : 1,
-    "recordsTotal" : 9,
-    "recordsFiltered" : 9,
+    "recordsTotal" : 14,
+    "recordsFiltered" : 14,
     "data" : [
         {
             "number" : 34,
@@ -74,6 +74,47 @@
             "terminus" : "yopougon sable",
             "price" : 500,
             "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 610,
+            "type" : "normal",
+            "depart" : "adjamé liberté",
+            "terminus" : "bingerville",
+            "price" : 250,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 209,
+            "type" : "express",
+            "depart" : "plateau sorbonne",
+            "terminus" : "yopougon sable",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 209,
+            "type" : "express",
+            "depart" : "plateau sorbonne",
+            "terminus" : "yopougon sable",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 209,
+            "type" : "express",
+            "depart" : "plateau sorbonne",
+            "terminus" : "yopougon sable",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 209,
+            "type" : "express",
+            "depart" : "plateau sorbonne",
+            "terminus" : "yopougon sable",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
         }
+
     ]
 }
