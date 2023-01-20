@@ -20,10 +20,10 @@ body{
   #menu {
     font-size: 1.2em;
   }
-  img {
+  /* img {
     height: 450px;
     width: 700px;
-  }
+  } */
   .title-h2{
     font-size: 3em;
     text-align: center;

@@ -45,6 +45,14 @@ function displaySweetAlert() {
     });
 }
 
+/**
+ * @author ahmed, ezekilel kouassi
+ * @description fonction mettant de générer le codeQr
+ * @param {*} selectorId 
+ * @param {*} data 
+ * @returns 
+ */
+
 function genQrCode(selectorId="qr-code", data="ezekiel") {
 
     renderQrCodeDiv();
@@ -64,29 +72,57 @@ function genQrCode(selectorId="qr-code", data="ezekiel") {
 function renderQrCodeDiv() {
     let div = document.getElementById("qr-code");
     if(div.innerHTML == '') {
-        div.style.display = "flex";
-        div.style.flexDirection = "column";
-        div.style.justifyContent = "center";
-        div.style.alignItems = "center";
-
-        let numberTextNode = document.createElement('p');
-        let txtNumber = document.createTextNode(`Numéro du bus : ${number}`);
-        numberTextNode.appendChild(txtNumber);
-        let departTextNode = document.createElement('p');
-        let txtDepart = document.createTextNode(`Départ du bus : ${depart}`);
-        departTextNode.appendChild(txtDepart);
-        let terminusTextNode = document.createElement('p');
-        let txtTerminus = document.createTextNode(`terminus : ${terminus}`);
-        terminusTextNode.appendChild(txtTerminus);
-
-        div.appendChild(numberTextNode);
-        div.appendChild(departTextNode);
-        div.appendChild(terminusTextNode);
+        renderComponent(div);
     }else{
-        div.innerHTML = ""
+        renderComponent(div);
     }
     
 }
+
+/**
+ * @author ezekiel kouassi
+ * @description cette fonction fait la création des éléments du ticket de bus
+ * @param {*} div 
+ */
+
+function renderComponent(div) {
+    
+    // dispositon de la vue du réçu en mode flex column
+    div.style.display = "flex";
+    div.style.flexDirection = "column";
+    div.style.justifyContent = "center";
+    div.style.alignItems = "center";
+
+    // création du texte à affiché
+    let numberTextNode = document.createElement('p');
+    let txtNumber = document.createTextNode(`Numéro du bus : ${number}`);
+    numberTextNode.appendChild(txtNumber);
+    let departTextNode = document.createElement('p');
+    let txtDepart = document.createTextNode(`Départ du bus : ${depart}`);
+    departTextNode.appendChild(txtDepart);
+    let terminusTextNode = document.createElement('p');
+    let txtTerminus = document.createTextNode(`terminus : ${terminus}`);
+    terminusTextNode.appendChild(txtTerminus);
+
+    // création du button d'impression
+    let btnPrint = document.createElement("button");
+    let btnTextNode = document.createTextNode("Imprimer");
+    btnPrint.appendChild(btnTextNode);
+    btnPrint.classList.add('btn');
+    btnPrint.classList.add('btn-success');
+    btnPrint.classList.add('mb-3');
+
+    // ajout des différends noeuf crée au DOM
+    div.appendChild(numberTextNode);
+    div.appendChild(departTextNode);
+    div.appendChild(terminusTextNode);
+    div.appendChild(btnPrint);
+}
+
+/**
+ * @author ezekiel kouassi
+ * @description cette fonction est chargé de faire l'impression du ticket
+ */
 
 function printPdf() {
 
@@ -131,6 +167,11 @@ function printPdf() {
     localStorage.setItem("ticketNumber", localStorage.getItem("ticketNumber") + 1);
 }
 
+/**
+ * @author ezekiel kouassi
+ * @description cette fonction permet de récupérer les éléments du dataTable au click du btn
+ */
+
 (function getRow() {
     $('#data-table').on('click', '.btn', function(){
         number = $(this).closest('tr').find('td').eq(0).html();
@@ -143,8 +184,9 @@ function printPdf() {
 
 
 function resolvePbDisplayQrCode(){
-    $('#qr-code img').attr('style', 'display : none');
-    $('#qr-code canvas').css('style', 'display : block');
+    let canvas = document.getElementsByClassName("canvas");
+    console.log(canvas);
+    //canvas[0].style.display = "block";
 };
 
 let number;
