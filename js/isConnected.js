@@ -1,3 +1,6 @@
+/**
+ * @description: Verfication lors du chargement de la page de l'authentification
+ */
 document.addEventListener('DOMContentLoaded', () => {
     
     if(localStorage.getItem('login') && localStorage.getItem('login') == 'true')  {

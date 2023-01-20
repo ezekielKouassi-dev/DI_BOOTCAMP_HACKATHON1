@@ -1,4 +1,6 @@
-
+/**
+ * @description: cette fonction permet de charger les informations de base dans le localstorage
+ */
 async function checker(){
  
     localStorage.setItem('login', false);
@@ -18,6 +20,8 @@ async function checker(){
     console.log(json['data']);
   
 }
+
+
 document.addEventListener('DOMContentLoaded', () => {
     
     

@@ -1,4 +1,9 @@
-
+/**
+ * @description: Fonction pour vérifier les champs du formulaire
+ * @param {*} inputId 
+ * @param {*} errorMessageId 
+ * @param {*} errorMessage 
+ */
 function checkInput(inputId, errorMessageId, errorMessage="Le champ est obligatoire." ) {
 
     if (!document.getElementById(inputId).value || document.getElementById(inputId).value ==''){
@@ -8,13 +13,18 @@ function checkInput(inputId, errorMessageId, errorMessage="Le champ est obligato
     }
 }
 
-
+/**
+ * @description Fonction pour cacher les messages d'erreurs
+ * @param {*} errorMessageId 
+ */
 function onFocusedElement(errorMessageId){
     document.getElementById(errorMessageId).style.display = 'none'
 }
 
 
-
+/**
+ * @description: fonction executée flrs de la soumission du formulaire d'authentication
+ */
 document.getElementById('loginForm').addEventListener('submit', function(event) {
     event.preventDefault()
     // console.log(event.target);
@@ -38,18 +48,33 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
 })
 
+/**
+ * @description: Cette fonction permet de vérifier si le champ login est bien renseigné
+ */
 document.getElementById('login').addEventListener('focus', function(event) {
     onFocusedElement('msgLogin');
 });
 
+
+/**
+ * @description: Cette fonction permet de vérifier si le champ password est bien renseigné
+ */
 document.getElementById('password').addEventListener('password', function(event) {
     onFocusedElement('msgPassword');
 });
 
+
+/**
+ * @description: Cette fonction permet execute lorsau'on quitte le champ login pour retirer le message d'eereur
+ */
 document.getElementById('login').addEventListener('blur', function(event) {
     checkInput('login','msgLogin')
 });
 
+/**
+ * 
+ * @description: Cette fonction permet execute lorsau'on quitte le champpassword pour retirer le message d'eereur
+ */
 document.getElementById('password').addEventListener('blur', function(event) {
     checkInput('password','msgPassword')
 });

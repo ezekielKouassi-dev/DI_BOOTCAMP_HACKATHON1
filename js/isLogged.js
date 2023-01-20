@@ -1,3 +1,6 @@
+/**
+ * @description: Verfication lors du chargement de la page de l'authentification
+ */
 document.addEventListener('DOMContentLoaded', () => {
     
     if(!localStorage.getItem('login') && localStorage.getItem('login') != 'true')  {
@@ -7,6 +10,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
+
+/**
+ * @description: Foncition pour la deconnexion
+ */
 document.getElementById('logout').onclick = function() {
     localStorage.setItem('login',false);
     window.location.href = '../pages/login.html';
