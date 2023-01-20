@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>home-page-datatable</title>
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.0/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.1/css/dataTables.bootstrap5.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+<link rel="stylesheet" href="../css/all-style.css">
+<script src="../js/isConnected.js" defer></script>
+<script src="../js/auth.js" defer></script>
+
+
+</head>
+<body>
+   
+    <main>
+        <div class="container-fluid">
+            <div class="welcome">
+                <header>
+                  <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+                    <div class="container-fluid">
+                      <div class="container-fluid">
+                        <a class="navbar-brand" id="title" href="#">Ticketpay</a>
+                      </div>
+                      <ul class="navbar-nav" id="menu">
+                        <li class="nav-item">
+                          <a class="nav-link" href="./../index.html"> Accueil</a>
+                        </li>
+                        <li class="nav-item">
+                          <a class="nav-link" href="./itineraire.html">Itinéraires</a>
+                        </li>
+                      </ul>
+                    </div>
+                  </nav>
+                </header>
+               <div class="div-breadcrumb">
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb">
+                        <li class="breadcrumb-item"><a href="#">TicketPay</a></li>
+                        <li class="breadcrumb-item"><a href="#">Accueil</a></li>
+                        <li class="breadcrumb-item active text-white" aria-current="page">Authentification</li>
+                        </ol>
+                    </nav>
+               </div>
+            </div>
+            <div class="row container-fluid" style="margin-left: 15%;">
+                <div class="col-lg-8 col-lg-offset-3 mt-5 px-5">
+                    <form onsubmit="event.preventDefault()" id="loginForm">
+                        <div class="row row h-100 justify-content-center align-items-center">
+                            <div id="generalMessage" class="text-danger"></div>
+                        </div>
+                        <div class="row row h-100 justify-content-center align-items-center">
+
+                          <div class="col-lg-6">
+                            <div class="form-group">
+                                <label for="login">Email ou nom d'utilisateur</label>
+                                <input type="text" class="form-control" placeholder="Enter votre identifiant" name="login" id="login">
+                                <span class="text-danger" id="msgLogin"> </span>
+
+                            </div>
+                          </div>
+                        </div>
+                        <div class="row row h-100 justify-content-center align-items-center">
+
+                          <div class="col-lg-6 mt-2">
+                            <div class="form-group">
+                                <label for="password">Mot de passe</label>
+                                <input type="password" class="form-control" id="password" placeholder="Enter votre mot de passe" name="password">
+                                <span class="text-danger" id="msgPassword"> </span>
+                            </div>
+                          </div>
+                        </div>
+                        <div  class="row h-100 justify-content-center align-items-center">
+                            <div class="col-lg-2 m-3">
+                                <input type="submit" class="btn btn-success" value="Rechercher">
+                            </div>
+                          
+                        </div>
+                      </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+</body>
+</html>

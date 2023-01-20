@@ -1,0 +1,88 @@
+{
+    "draw" : 1,
+    "recordsTotal" : 9,
+    "recordsFiltered" : 9,
+    "data" : [
+        {
+            "number" : 34,
+            "type" : "normal",
+            "departure": "yopougon gesco",
+            "arrival": "Plateau cité administrative",
+            "itineraire" : "yopougon gesco <--> Plateau cité administrative",
+            "price" : 200,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 212,
+            "type" : "express",
+            "departure": "yopougon niangon à gauche",
+            "arrival": "Plateau gare sud",
+            "itineraire" : "yopougon niangon à gauche <--> Plateau gare sud",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 206,
+            "type" : "express",
+            "departure": "yopougon siporex",
+            "arrival": "Plateau sorbonne",
+            "itineraire" : "yopougon siporex <--> Plateau sorbonne",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 726,
+            "type" : "normal",
+            "departure": "plateau gare sud",
+            "arrival": "yopougon soghefia",
+            "itineraire" : "plateau gare sud <--> yopougon soghefia",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 728,
+            "type" : "normal",
+            "departure": "yopougon niangon à gauche",
+            "arrival": "Palmeraie",
+            "itineraire" : "yopougon niangon à gauche <--> Palmeraie",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 201,
+            "type" : "express",
+            "departure": "plateau gare sud",
+            "arrival": "abobo",
+            "itineraire" : "plateau gare sud <--> abobo",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 27,
+            "type" : "normal",
+            "departure": "plateau",
+            "arrival": "Niangon sud",
+            "itineraire" : "plateau <--> Niangon sud",
+            "price" : 200,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 211,
+            "type" : "express",
+            "departure": "plateau gare sud",
+            "arrival": "gonzague ville",
+            "itineraire" : "plateau gare sud <--> gonzague ville",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        },
+        {
+            "number" : 209,
+            "type" : "express",
+            "departure": "plateau sorbonne",
+            "arrival": "yopougon sable",
+            "itineraire" : "plateau sorbonne <--> yopougon sable",
+            "price" : 500,
+            "option" : "<button class='btn btn-success'>achat</button>"
+        }
+    ]
+}
