@@ -55,4 +55,3 @@ function makePdfjs(data){
      
       pdf.save("tiket.pdf");
 }
-

@@ -1,6 +1,8 @@
-$(document).ready(function() {
-    $('.main-btn').on('click', function () {
-        this.style.display = 'none';
-        
+(function displayNoneLoader() {
+    let loader = document.querySelector('.preloader');
+    window.addEventListener("load", function() {
+        this.setTimeout(function(){
+            loader.style.display = "none";
+        }, 3000);
     });
-});
+})()

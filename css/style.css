@@ -1,9 +1,18 @@
 header h1 {
     text-align: center;
-    font-size: 70px;
+    font-size: 50px;
     text-transform: uppercase;
     font-weight: bold;
     font-style: italic;
     color: green;
+}
+
+.preloader {
+    background: #000 url("https://gifimage.net/wp-content/uploads/2018/11/circle-loader-gif-2.gif") no-repeat center center;
+    background-size: 50%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }
     
